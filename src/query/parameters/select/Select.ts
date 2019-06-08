@@ -22,6 +22,8 @@ export class Select implements ISelect {
    * @returns The resulting parameter string.
    */
   public toString(): string {
-    return this.fields ? `$select=${this.fields.join(',')}` : '';
+    return this.fields && this.fields.length > 0 ?
+      `$select=${this.fields.join(',')}` :
+      '';
   }
 }
