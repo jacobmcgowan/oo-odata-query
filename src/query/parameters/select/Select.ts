@@ -1,5 +1,4 @@
-import { ISelect } from "./ISelect";
-
+import { ISelect } from './ISelect';
 
 /**
  * Specifies the fields to select.
@@ -10,7 +9,6 @@ export class Select implements ISelect {
    */
   public fields: string[];
 
-
   /**
    * Creates a Select.
    * @param fields The fields to select.
@@ -19,14 +17,11 @@ export class Select implements ISelect {
     this.fields = fields;
   }
 
-
   /**
    * Converts the Select to an OData parameter string.
    * @returns The resulting parameter string.
    */
   public toString(): string {
-    return this.fields ?
-      `$select=${this.fields.join(',')}` :
-      '';
+    return this.fields ? `$select=${this.fields.join(',')}` : '';
   }
 }

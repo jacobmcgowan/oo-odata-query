@@ -1,8 +1,4 @@
-import { 
-  IParameter,
-  ISelect
-} from './parameters';
-
+import { IParameter, ISelect } from './parameters';
 
 /**
  * Defines an OData query.
@@ -13,7 +9,6 @@ export class Query {
    */
   public select: ISelect | null | undefined;
 
-
   /**
    * Creates a Query.
    * @param select Defines the fields to select.
@@ -22,19 +17,17 @@ export class Query {
     this.select = select;
   }
 
-
   /**
    * Converts the Query as an OData query string.
    * @returns The resulting query string.
    */
   public toString(): string {
-    let parameters = new Array<string>();
+    const parameters = new Array<string>();
 
     this._addIfValid(this.select, parameters);
 
     return parameters.join('&');
   }
-
 
   /**
    * Adds a parameter value to add.
