@@ -1,32 +1,33 @@
-import { IParameter, ISelect } from './parameters';
+import { IQuery } from './IQuery';
+import {
+  IExpand,
+  IParameter,
+  ISelect
+} from './parameters';
 
 /**
  * Defines an OData query.
  */
-export class Query {
-  /**
-   * Defines the fields to select.
-   */
-  public select: ISelect | null | undefined;
+export class Query implements IQuery {
+  public expand?: IExpand;
+  public select?: ISelect;
 
   /**
    * Creates a Query.
    * @param select Defines the fields to select.
    */
-  public constructor(select?: ISelect) {
+  public constructor(select?: ISelect, expand?: IExpand) {
     this.select = select;
+    this.expand = expand;
   }
 
-  /**
-   * Converts the Query as an OData query string.
-   * @returns The resulting query string.
-   */
-  public toString(): string {
+  public toString(deliminator: string = '&'): string {
     const parameters = new Array<string>();
 
-    this._addIfValid(this.select, parameters);
+    this._addIfValid(parameters, '$select=', this.select);
+    this._addIfValid(parameters, '$expand=', this.expand);
 
-    return parameters.join('&');
+    return parameters.join(deliminator);
   }
 
   /**
@@ -34,12 +35,12 @@ export class Query {
    * @param parameter The value to add.
    * @param to The array to add to.
    */
-  private _addIfValid(parameter: IParameter | null | undefined, to: string[]) {
+  private _addIfValid(to: string[], prefix: string, parameter?: IParameter) {
     if (parameter) {
       const stringValue = parameter.toString();
 
       if (stringValue) {
-        to.push(stringValue);
+        to.push(`${prefix}${stringValue}`);
       }
     }
   }

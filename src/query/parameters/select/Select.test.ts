@@ -5,9 +5,9 @@ test('Empty Select', () => {
 });
 
 test('Select one field', () => {
-  expect(new Select(['id']).toString()).toBe('$select=id');
+  expect(new Select(['id']).toString()).toBe('id');
 });
 
 test('Select multiple fields', () => {
-  expect(new Select(['id', 'name']).toString()).toBe('$select=id,name');
+  expect(new Select(['id', 'name']).toString()).toBe('id,name');
 });
