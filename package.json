@@ -1,0 +1,27 @@
+{
+  "name": "oo-odata-query",
+  "version": "0.1.0",
+  "description": "Provides an object oriented method of building OData queries.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobmcgowan/oo-odata-query.git"
+  },
+  "keywords": [
+    "odata",
+    "query"
+  ],
+  "author": "Jacob McGowan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacobmcgowan/oo-odata-query/issues"
+  },
+  "homepage": "https://github.com/jacobmcgowan/oo-odata-query#readme",
+  "devDependencies": {
+    "typescript": "^3.5.1"
+  }
+}
