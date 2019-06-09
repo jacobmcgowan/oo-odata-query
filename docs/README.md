@@ -175,7 +175,6 @@
 * [Query](#Query)
     * [new Query(options)](#new_Query_new)
     * [.toString(deliminator)](#Query+toString) ⇒
-    * [._addIfValid(parameter, prefix, to)](#Query+_addIfValid)
 
 <a name="new_Query_new"></a>
 
@@ -198,17 +197,4 @@
 | Param | Default | Description |
 | --- | --- | --- |
 | deliminator | <code>&amp;</code> | <p>The deliminator to use between parameter strings.</p> |
-
-<a name="Query+_addIfValid"></a>
-
-### query.\_addIfValid(parameter, prefix, to)
-<p>Adds a parameter value to add.</p>
-
-**Kind**: instance method of [<code>Query</code>](#Query)  
-
-| Param | Description |
-| --- | --- |
-| parameter | <p>The value to add.</p> |
-| prefix | <p>The prefix of the parameter.</p> |
-| to | <p>The array to add to.</p> |
 

@@ -36,6 +36,7 @@ export class Query implements IQuery {
 
   /**
    * Adds a parameter value to add.
+   * @private
    * @param parameter The value to add.
    * @param prefix The prefix of the parameter.
    * @param to The array to add to.
