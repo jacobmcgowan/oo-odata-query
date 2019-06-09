@@ -2,7 +2,7 @@
 
 This library provides an object oriented method of building OData queries.
 
-## [Documentation](/docs/index.html)
+## [Documentation](/docs/)
 
 ## Examples
 
