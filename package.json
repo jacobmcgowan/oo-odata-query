@@ -15,8 +15,9 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
-    "version": "npm run format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "version": "npm run format && npm run doc && git add -A src docs",
+    "postversion": "git push && git push --tags",
+    "doc": "typedoc src"
   },
   "repository": {
     "type": "git",
@@ -39,6 +40,7 @@
     "ts-jest": "^24.0.2",
     "tslint": "^5.17.0",
     "tslint-config-prettier": "^1.18.0",
+    "typedoc": "^0.14.2",
     "typescript": "^3.5.1"
   }
 }

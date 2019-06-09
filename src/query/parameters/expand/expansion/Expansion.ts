@@ -5,7 +5,14 @@ import { IExpansion } from './IExpansion';
  * Defines a child to expand.
  */
 export class Expansion implements IExpansion {
+  /**
+   * The child field to expand.
+   */
   public field: string;
+
+  /**
+   * The query to apply to the child.
+   */
   public query?: IQuery;
 
   /**
@@ -18,6 +25,10 @@ export class Expansion implements IExpansion {
     this.query = query;
   }
 
+  /**
+   * Outputs the OData parameter string.
+   * @returns The resulting parameter string.
+   */
   public toString(): string {
     let result = '';
 

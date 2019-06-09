@@ -4,6 +4,8 @@
     "tslint-config-prettier"
   ],
   "rules": {
+    "completed-docs": true,
+    "eofline": true,
     "quotemark": {
       "options": "single"
     }
