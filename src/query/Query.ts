@@ -1,5 +1,5 @@
 import { IQuery } from './IQuery';
-import { IExpand, IParameter, ISelect } from './parameters';
+import { IExpand, IOrderBy, IParameter, ISelect } from './parameters';
 
 /**
  * Defines an OData query.
@@ -7,14 +7,16 @@ import { IExpand, IParameter, ISelect } from './parameters';
 export class Query implements IQuery {
   public expand?: IExpand;
   public select?: ISelect;
+  public orderBy?: IOrderBy;
 
   /**
    * Creates a Query.
    * @param select Defines the fields to select.
    */
-  public constructor(select?: ISelect, expand?: IExpand) {
+  public constructor(select?: ISelect, expand?: IExpand, orderBy?: IOrderBy) {
     this.select = select;
     this.expand = expand;
+    this.orderBy = orderBy;
   }
 
   public toString(deliminator: string = '&'): string {
@@ -22,6 +24,7 @@ export class Query implements IQuery {
 
     this._addIfValid(parameters, '$select=', this.select);
     this._addIfValid(parameters, '$expand=', this.expand);
+    this._addIfValid(parameters, '$orderby=', this.orderBy);
 
     return parameters.join(deliminator);
   }
