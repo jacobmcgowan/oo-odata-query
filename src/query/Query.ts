@@ -1,9 +1,5 @@
 import { IQuery } from './IQuery';
-import {
-  IExpand,
-  IParameter,
-  ISelect
-} from './parameters';
+import { IExpand, IParameter, ISelect } from './parameters';
 
 /**
  * Defines an OData query.

@@ -1,7 +1,4 @@
-import {
-  IExpand,
-  ISelect
-} from './parameters';
+import { IExpand, ISelect } from './parameters';
 
 /**
  * Defines an OData query.

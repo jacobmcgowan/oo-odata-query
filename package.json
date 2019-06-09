@@ -1,6 +1,6 @@
 {
   "name": "oo-odata-query",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Provides an object oriented method of building OData queries.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",

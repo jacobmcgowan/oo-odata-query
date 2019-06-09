@@ -16,8 +16,8 @@ export class Expand implements IExpand {
   }
 
   public toString(): string {
-    return this.expansions && this.expansions.length > 0 ?
-      this.expansions.map(expansion => expansion.toString()).join(',') :
-      '';
+    return this.expansions && this.expansions.length > 0
+      ? this.expansions.map(expansion => expansion.toString()).join(',')
+      : '';
   }
 }
