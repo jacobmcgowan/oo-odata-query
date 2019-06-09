@@ -3,7 +3,8 @@
  */
 export interface IParameter {
   /**
-   * Outputs the parameters as a query string.
+   * Outputs the OData parameter string.
+   * @returns The resulting parameter string.
    */
   toString(): string;
 }

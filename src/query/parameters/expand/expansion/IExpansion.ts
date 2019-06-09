@@ -1,9 +1,10 @@
 import { IQuery } from '../../../IQuery';
+import { IParameter } from '../../IParameter';
 
 /**
  * Defines a child to expand.
  */
-export interface IExpansion {
+export interface IExpansion extends IParameter {
   /**
    * The child field to expand.
    */
@@ -13,10 +14,4 @@ export interface IExpansion {
    * The query to apply to the child.
    */
   query?: IQuery;
-
-  /**
-   * Converts the Expansion to an OData parameter string.
-   * @returns The resulting parameter string.
-   */
-  toString(): string;
 }

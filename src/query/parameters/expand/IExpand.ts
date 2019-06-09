@@ -1,17 +1,12 @@
+import { IParameter } from '../IParameter';
 import { IExpansion } from './expansion';
 
 /**
  * Defines children to expand.
  */
-export interface IExpand {
+export interface IExpand extends IParameter {
   /**
    * The children expansion definitions.
    */
   expansions: IExpansion[];
-
-  /**
-   * Converts the Expand to an OData parameter string.
-   * @returns The resulting parameter string.
-   */
-  toString(): string;
 }
