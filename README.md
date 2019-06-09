@@ -41,17 +41,13 @@ returns
 and
 
 ~~~
-new Query(
-  undefined,
-  new Expand([
+new Query({
+  expand: new Expand([
     new Expansion(
       'contact',
-      new Query(
-        new Select([
-          'id',
-          'name'
-        ])
-      )
+      new Query({
+        select: new Select(['id', 'name'])
+      })
     )
   ])
 ).toString();
