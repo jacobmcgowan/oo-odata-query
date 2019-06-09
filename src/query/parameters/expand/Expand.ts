@@ -5,6 +5,9 @@ import { IExpand } from './IExpand';
  * Defines children to expand.
  */
 export class Expand implements IExpand {
+  /**
+   * The children expansion definitions.
+   */
   public expansions: IExpansion[];
 
   /**
@@ -15,6 +18,10 @@ export class Expand implements IExpand {
     this.expansions = expansions;
   }
 
+  /**
+   * Outputs the OData parameter string.
+   * @returns The resulting parameter string.
+   */
   public toString(): string {
     return this.expansions && this.expansions.length > 0
       ? this.expansions.map(expansion => expansion.toString()).join(',')

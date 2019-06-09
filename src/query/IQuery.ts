@@ -1,23 +1,13 @@
-import { IExpand, IOrderBy, ISelect } from './parameters';
+import { QueryOptions } from './query-options/QueryOptions';
 
 /**
  * Defines an OData query.
  */
 export interface IQuery {
   /**
-   * Defines the children to expand.
+   * The options to apply to the query.
    */
-  expand?: IExpand;
-
-  /**
-   * Defines the fields to select.
-   */
-  select?: ISelect;
-
-  /**
-   * Defines criteria to order by.
-   */
-  orderBy?: IOrderBy;
+  options: QueryOptions;
 
   /**
    * Converts the Query as an OData query string.

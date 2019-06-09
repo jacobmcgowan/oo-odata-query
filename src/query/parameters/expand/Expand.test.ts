@@ -10,7 +10,14 @@ test('Expand one child', () => {
 
 test('Expand one child with a parameter', () => {
   expect(
-    new Expand([new Expansion('contacts', new Query(undefined, new Expand([new Expansion('address')])))]).toString(),
+    new Expand([
+      new Expansion(
+        'contacts',
+        new Query({
+          expand: new Expand([new Expansion('address')]),
+        }),
+      ),
+    ]).toString(),
   ).toBe('contacts($expand=address)');
 });
 
@@ -21,8 +28,18 @@ test('Expand multiple children', () => {
 test('Expand multiple children with a parameter', () => {
   expect(
     new Expand([
-      new Expansion('contacts', new Query(undefined, new Expand([new Expansion('manager')]))),
-      new Expansion('address', new Query(new Select(['city', 'state', 'country']))),
+      new Expansion(
+        'contacts',
+        new Query({
+          expand: new Expand([new Expansion('manager')]),
+        }),
+      ),
+      new Expansion(
+        'address',
+        new Query({
+          select: new Select(['city', 'state', 'country']),
+        }),
+      ),
     ]).toString(),
   ).toBe('contacts($expand=manager),address($select=city,state,country)');
 });
