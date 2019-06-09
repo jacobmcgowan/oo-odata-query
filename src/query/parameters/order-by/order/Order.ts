@@ -26,7 +26,7 @@ export class Order implements IOrder {
 
   /**
    * Outputs the OData parameter string.
-   * @returns The resulting parameter string.
+   * @returns {string} The resulting parameter string.
    */
   public toString() {
     // If the criteria is an empty string, we want to output that without desc.

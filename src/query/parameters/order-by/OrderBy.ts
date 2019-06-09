@@ -20,7 +20,7 @@ export class OrderBy implements IOrderBy {
 
   /**
    * Outputs the OData parameter string.
-   * @returns The resulting parameter string.
+   * @returns {string} The resulting parameter string.
    */
   public toString(): string {
     return this.orders && this.orders.length > 0 ? this.orders.map(order => order.toString()).join(',') : '';

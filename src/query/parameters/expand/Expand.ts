@@ -20,7 +20,7 @@ export class Expand implements IExpand {
 
   /**
    * Outputs the OData parameter string.
-   * @returns The resulting parameter string.
+   * @returns {string} The resulting parameter string.
    */
   public toString(): string {
     return this.expansions && this.expansions.length > 0

@@ -26,7 +26,7 @@
 
 * [Expand](#Expand)
     * [new Expand(expansions)](#new_Expand_new)
-    * [.toString()](#Expand+toString) ⇒
+    * [.toString()](#Expand+toString) ⇒ <code>string</code>
 
 <a name="new_Expand_new"></a>
 
@@ -40,11 +40,11 @@
 
 <a name="Expand+toString"></a>
 
-### expand.toString() ⇒
+### expand.toString() ⇒ <code>string</code>
 <p>Outputs the OData parameter string.</p>
 
 **Kind**: instance method of [<code>Expand</code>](#Expand)  
-**Returns**: <p>The resulting parameter string.</p>  
+**Returns**: <code>string</code> - <p>The resulting parameter string.</p>  
 <a name="Expansion"></a>
 
 ## Expansion
@@ -54,7 +54,7 @@
 
 * [Expansion](#Expansion)
     * [new Expansion(field, query)](#new_Expansion_new)
-    * [.toString()](#Expansion+toString) ⇒
+    * [.toString()](#Expansion+toString) ⇒ <code>string</code>
 
 <a name="new_Expansion_new"></a>
 
@@ -69,11 +69,11 @@
 
 <a name="Expansion+toString"></a>
 
-### expansion.toString() ⇒
+### expansion.toString() ⇒ <code>string</code>
 <p>Outputs the OData parameter string.</p>
 
 **Kind**: instance method of [<code>Expansion</code>](#Expansion)  
-**Returns**: <p>The resulting parameter string.</p>  
+**Returns**: <code>string</code> - <p>The resulting parameter string.</p>  
 <a name="Order"></a>
 
 ## Order
@@ -83,7 +83,7 @@
 
 * [Order](#Order)
     * [new Order(criteria, ascending)](#new_Order_new)
-    * [.toString()](#Order+toString) ⇒
+    * [.toString()](#Order+toString) ⇒ <code>string</code>
 
 <a name="new_Order_new"></a>
 
@@ -98,11 +98,11 @@
 
 <a name="Order+toString"></a>
 
-### order.toString() ⇒
+### order.toString() ⇒ <code>string</code>
 <p>Outputs the OData parameter string.</p>
 
 **Kind**: instance method of [<code>Order</code>](#Order)  
-**Returns**: <p>The resulting parameter string.</p>  
+**Returns**: <code>string</code> - <p>The resulting parameter string.</p>  
 <a name="OrderBy"></a>
 
 ## OrderBy
@@ -112,7 +112,7 @@
 
 * [OrderBy](#OrderBy)
     * [new OrderBy(orders)](#new_OrderBy_new)
-    * [.toString()](#OrderBy+toString) ⇒
+    * [.toString()](#OrderBy+toString) ⇒ <code>string</code>
 
 <a name="new_OrderBy_new"></a>
 
@@ -126,11 +126,11 @@
 
 <a name="OrderBy+toString"></a>
 
-### orderBy.toString() ⇒
+### orderBy.toString() ⇒ <code>string</code>
 <p>Outputs the OData parameter string.</p>
 
 **Kind**: instance method of [<code>OrderBy</code>](#OrderBy)  
-**Returns**: <p>The resulting parameter string.</p>  
+**Returns**: <code>string</code> - <p>The resulting parameter string.</p>  
 <a name="Select"></a>
 
 ## Select
@@ -140,7 +140,7 @@
 
 * [Select](#Select)
     * [new Select(fields)](#new_Select_new)
-    * [.toString()](#Select+toString) ⇒
+    * [.toString()](#Select+toString) ⇒ <code>string</code>
 
 <a name="new_Select_new"></a>
 
@@ -154,11 +154,11 @@
 
 <a name="Select+toString"></a>
 
-### select.toString() ⇒
+### select.toString() ⇒ <code>string</code>
 <p>Outputs the OData parameter string.</p>
 
 **Kind**: instance method of [<code>Select</code>](#Select)  
-**Returns**: <p>The resulting parameter string.</p>  
+**Returns**: <code>string</code> - <p>The resulting parameter string.</p>  
 <a name="QueryOptions"></a>
 
 ## QueryOptions
@@ -174,7 +174,7 @@
 
 * [Query](#Query)
     * [new Query(options)](#new_Query_new)
-    * [.toString(deliminator)](#Query+toString) ⇒
+    * [.toString(deliminator)](#Query+toString) ⇒ <code>string</code>
 
 <a name="new_Query_new"></a>
 
@@ -188,11 +188,11 @@
 
 <a name="Query+toString"></a>
 
-### query.toString(deliminator) ⇒
+### query.toString(deliminator) ⇒ <code>string</code>
 <p>Converts the Query as an OData query string.</p>
 
 **Kind**: instance method of [<code>Query</code>](#Query)  
-**Returns**: <p>The resulting query string.</p>  
+**Returns**: <code>string</code> - <p>The resulting query string.</p>  
 
 | Param | Default | Description |
 | --- | --- | --- |

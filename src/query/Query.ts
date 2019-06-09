@@ -22,7 +22,7 @@ export class Query implements IQuery {
   /**
    * Converts the Query as an OData query string.
    * @param deliminator The deliminator to use between parameter strings.
-   * @returns The resulting query string.
+   * @returns {string} The resulting query string.
    */
   public toString(deliminator: string = '&'): string {
     const parameters = new Array<string>();

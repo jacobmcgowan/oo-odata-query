@@ -27,7 +27,7 @@ export class Expansion implements IExpansion {
 
   /**
    * Outputs the OData parameter string.
-   * @returns The resulting parameter string.
+   * @returns {string} The resulting parameter string.
    */
   public toString(): string {
     let result = '';

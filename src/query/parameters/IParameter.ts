@@ -4,7 +4,7 @@
 export interface IParameter {
   /**
    * Outputs the OData parameter string.
-   * @returns The resulting parameter string.
+   * @returns {string} The resulting parameter string.
    */
   toString(): string;
 }

@@ -19,7 +19,7 @@ export class Select implements ISelect {
 
   /**
    * Outputs the OData parameter string.
-   * @returns The resulting parameter string.
+   * @returns {string} The resulting parameter string.
    */
   public toString(): string {
     return this.fields && this.fields.length > 0 ? this.fields.join(',') : '';
