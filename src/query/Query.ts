@@ -1,5 +1,5 @@
 import { IQuery } from './IQuery';
-import { IParameter } from './parameters';
+import { IFilter, IParameter } from './parameters';
 import { QueryOptions } from './query-options';
 
 /**
@@ -29,6 +29,7 @@ export class Query implements IQuery {
 
     this._addIfValid(parameters, '$select=', this.options.select);
     this._addIfValid(parameters, '$expand=', this.options.expand);
+    this._addIfValid(parameters, '$filter=', this.options.filter);
     this._addIfValid(parameters, '$orderby=', this.options.orderBy);
 
     return parameters.join(deliminator);
@@ -41,7 +42,7 @@ export class Query implements IQuery {
    * @param prefix The prefix of the parameter.
    * @param to The array to add to.
    */
-  private _addIfValid(to: string[], prefix: string, parameter?: IParameter) {
+  private _addIfValid(to: string[], prefix: string, parameter?: IParameter | IFilter) {
     if (parameter) {
       const stringValue = parameter.toString();
 

@@ -1,4 +1,4 @@
-import { Expand, Expansion, Order, OrderBy, Query, Select } from './';
+import { Eq, Expand, Expansion, Order, OrderBy, Query, Select } from './';
 
 test('Empty Query', () => {
   expect(new Query({}).toString()).toBe('');
@@ -26,6 +26,14 @@ test('Query OrderBy', () => {
       orderBy: new OrderBy([new Order('name')]),
     }).toString(),
   ).toBe('$orderby=name');
+});
+
+test('Query Filter', () => {
+  expect(
+    new Query({
+      filter: new Eq('name', '\'John Smith\'')
+    }).toString()
+  ).toBe('$filter=name eq \'John Smith\'');
 });
 
 test('Query multiple', () => {
