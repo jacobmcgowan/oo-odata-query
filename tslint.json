@@ -8,6 +8,9 @@
     "eofline": true,
     "quotemark": {
       "options": "single"
+    },
+    "variable-name": {
+      "options": "allow-leading-underscore"
     }
   }
 }
