@@ -31,9 +31,9 @@ test('Query OrderBy', () => {
 test('Query Filter', () => {
   expect(
     new Query({
-      filter: new Eq('name', '\'John Smith\'')
-    }).toString()
-  ).toBe('$filter=name eq \'John Smith\'');
+      filter: new Eq('name', "'John Smith'"),
+    }).toString(),
+  ).toBe("$filter=name eq 'John Smith'");
 });
 
 test('Query multiple', () => {

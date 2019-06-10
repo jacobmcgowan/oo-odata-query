@@ -31,13 +31,9 @@ test('Invalid operands', () => {
 });
 
 test('Valid operands', () => {
-  expect(
-    new Ge('a', 'b').toString()
-  ).toBe('a ge b');
+  expect(new Ge('a', 'b').toString()).toBe('a ge b');
 });
 
 test('Valid operands with prefix', () => {
-  expect(
-    new Ge('a', 'b').toString('i')
-  ).toBe('i/a ge b');
+  expect(new Ge('a', 'b').toString('i')).toBe('i/a ge b');
 });

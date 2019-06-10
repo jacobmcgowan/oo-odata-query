@@ -31,13 +31,9 @@ test('Invalid operands', () => {
 });
 
 test('Valid operands', () => {
-  expect(
-    new Eq('a', 'b').toString()
-  ).toBe('a eq b');
+  expect(new Eq('a', 'b').toString()).toBe('a eq b');
 });
 
 test('Valid operands with prefix', () => {
-  expect(
-    new Eq('a', 'b').toString('i')
-  ).toBe('i/a eq b');
+  expect(new Eq('a', 'b').toString('i')).toBe('i/a eq b');
 });

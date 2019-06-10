@@ -31,13 +31,9 @@ test('Invalid operands', () => {
 });
 
 test('Valid operands', () => {
-  expect(
-    new Gt('a', 'b').toString()
-  ).toBe('a gt b');
+  expect(new Gt('a', 'b').toString()).toBe('a gt b');
 });
 
 test('Valid operands with prefix', () => {
-  expect(
-    new Gt('a', 'b').toString('i')
-  ).toBe('i/a gt b');
+  expect(new Gt('a', 'b').toString('i')).toBe('i/a gt b');
 });

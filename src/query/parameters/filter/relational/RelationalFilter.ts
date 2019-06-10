@@ -30,7 +30,7 @@ export abstract class RelationalFilter implements IRelationalFilter {
     if (StringUtils.isEmptyOrWhitespace(operator)) {
       throw new Error('Invalid operator.');
     }
-    
+
     if (StringUtils.isEmptyOrWhitespace(left)) {
       throw new Error('Invalid left operand.');
     }
@@ -38,7 +38,7 @@ export abstract class RelationalFilter implements IRelationalFilter {
     if (StringUtils.isEmptyOrWhitespace(right)) {
       throw new Error('Invalid right operand.');
     }
-    
+
     this._operator = operator;
     this.left = left;
     this.right = right;

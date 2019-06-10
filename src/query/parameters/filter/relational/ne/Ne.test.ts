@@ -31,13 +31,9 @@ test('Invalid operands', () => {
 });
 
 test('Valid operands', () => {
-  expect(
-    new Ne('a', 'b').toString()
-  ).toBe('a ne b');
+  expect(new Ne('a', 'b').toString()).toBe('a ne b');
 });
 
 test('Valid operands with prefix', () => {
-  expect(
-    new Ne('a', 'b').toString('i')
-  ).toBe('i/a ne b');
+  expect(new Ne('a', 'b').toString('i')).toBe('i/a ne b');
 });

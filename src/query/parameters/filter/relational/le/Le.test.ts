@@ -31,13 +31,9 @@ test('Invalid operands', () => {
 });
 
 test('Valid operands', () => {
-  expect(
-    new Le('a', 'b').toString()
-  ).toBe('a le b');
+  expect(new Le('a', 'b').toString()).toBe('a le b');
 });
 
 test('Valid operands with prefix', () => {
-  expect(
-    new Le('a', 'b').toString('i')
-  ).toBe('i/a le b');
+  expect(new Le('a', 'b').toString('i')).toBe('i/a le b');
 });

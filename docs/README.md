@@ -5,6 +5,22 @@
 <dd><p>Defines children to expand.</p></dd>
 <dt><a href="#Expansion">Expansion</a></dt>
 <dd><p>Defines a child to expand.</p></dd>
+<dt><a href="#Eq">Eq</a></dt>
+<dd><p>Specifies a filter condition where two values are equivalent.</p></dd>
+<dt><a href="#Ge">Ge</a></dt>
+<dd><p>Specifies a filter condition where the left operand if greater than or equal
+to the right.</p></dd>
+<dt><a href="#Gt">Gt</a></dt>
+<dd><p>Specifies a filter condition where the left operand if greater than the right.</p></dd>
+<dt><a href="#Le">Le</a></dt>
+<dd><p>Specifies a filter condition where the left operand if less than or equal to
+the right.</p></dd>
+<dt><a href="#Lt">Lt</a></dt>
+<dd><p>Specifies a filter condition where the left operand if less than the right.</p></dd>
+<dt><a href="#Ne">Ne</a></dt>
+<dd><p>Specifies a filter condition where two values are not equivalent.</p></dd>
+<dt><a href="#RelationalFilter">RelationalFilter</a></dt>
+<dd><p>Filters results with a relational condition between two values.</p></dd>
 <dt><a href="#Order">Order</a></dt>
 <dd><p>Defines a sort order for a specific piece of criteria.</p></dd>
 <dt><a href="#OrderBy">OrderBy</a></dt>
@@ -15,6 +31,8 @@
 <dd><p>Defines the options of a query.</p></dd>
 <dt><a href="#Query">Query</a></dt>
 <dd><p>Defines an OData query.</p></dd>
+<dt><a href="#StringUtils">StringUtils</a></dt>
+<dd><p>Provides additional functionality for strings.</p></dd>
 </dl>
 
 <a name="Expand"></a>
@@ -74,6 +92,144 @@
 
 **Kind**: instance method of [<code>Expansion</code>](#Expansion)  
 **Returns**: <code>string</code> - <p>The resulting parameter string.</p>  
+<a name="Eq"></a>
+
+## Eq
+<p>Specifies a filter condition where two values are equivalent.</p>
+
+**Kind**: global class  
+<a name="new_Eq_new"></a>
+
+### new Eq(left, right)
+<p>Creates an Eq.</p>
+
+
+| Param | Description |
+| --- | --- |
+| left | <p>The left operand.</p> |
+| right | <p>The right operand.</p> |
+
+<a name="Ge"></a>
+
+## Ge
+<p>Specifies a filter condition where the left operand if greater than or equal
+to the right.</p>
+
+**Kind**: global class  
+<a name="new_Ge_new"></a>
+
+### new Ge(left, right)
+<p>Creates an Ge.</p>
+
+
+| Param | Description |
+| --- | --- |
+| left | <p>The left operand.</p> |
+| right | <p>The right operand.</p> |
+
+<a name="Gt"></a>
+
+## Gt
+<p>Specifies a filter condition where the left operand if greater than the right.</p>
+
+**Kind**: global class  
+<a name="new_Gt_new"></a>
+
+### new Gt(left, right)
+<p>Creates an Gt.</p>
+
+
+| Param | Description |
+| --- | --- |
+| left | <p>The left operand.</p> |
+| right | <p>The right operand.</p> |
+
+<a name="Le"></a>
+
+## Le
+<p>Specifies a filter condition where the left operand if less than or equal to
+the right.</p>
+
+**Kind**: global class  
+<a name="new_Le_new"></a>
+
+### new Le(left, right)
+<p>Creates an Le.</p>
+
+
+| Param | Description |
+| --- | --- |
+| left | <p>The left operand.</p> |
+| right | <p>The right operand.</p> |
+
+<a name="Lt"></a>
+
+## Lt
+<p>Specifies a filter condition where the left operand if less than the right.</p>
+
+**Kind**: global class  
+<a name="new_Lt_new"></a>
+
+### new Lt(left, right)
+<p>Creates an Lt.</p>
+
+
+| Param | Description |
+| --- | --- |
+| left | <p>The left operand.</p> |
+| right | <p>The right operand.</p> |
+
+<a name="Ne"></a>
+
+## Ne
+<p>Specifies a filter condition where two values are not equivalent.</p>
+
+**Kind**: global class  
+<a name="new_Ne_new"></a>
+
+### new Ne(left, right)
+<p>Creates an Ne.</p>
+
+
+| Param | Description |
+| --- | --- |
+| left | <p>The left operand.</p> |
+| right | <p>The right operand.</p> |
+
+<a name="RelationalFilter"></a>
+
+## RelationalFilter
+<p>Filters results with a relational condition between two values.</p>
+
+**Kind**: global class  
+
+* [RelationalFilter](#RelationalFilter)
+    * [new RelationalFilter(operator, left, right)](#new_RelationalFilter_new)
+    * [.toString(prefix)](#RelationalFilter+toString)
+
+<a name="new_RelationalFilter_new"></a>
+
+### new RelationalFilter(operator, left, right)
+<p>Creates a RelationalFilter.</p>
+
+
+| Param | Description |
+| --- | --- |
+| operator | <p>The operator to compare the values with.</p> |
+| left | <p>The left operand.</p> |
+| right | <p>The right operand.</p> |
+
+<a name="RelationalFilter+toString"></a>
+
+### relationalFilter.toString(prefix)
+<p>Outputs the OData parameter string.</p>
+
+**Kind**: instance method of [<code>RelationalFilter</code>](#RelationalFilter)  
+
+| Param | Description |
+| --- | --- |
+| prefix | <p>The prefix to use in the parameter string.</p> |
+
 <a name="Order"></a>
 
 ## Order
@@ -197,4 +353,21 @@
 | Param | Default | Description |
 | --- | --- | --- |
 | deliminator | <code>&amp;</code> | <p>The deliminator to use between parameter strings.</p> |
+
+<a name="StringUtils"></a>
+
+## StringUtils
+<p>Provides additional functionality for strings.</p>
+
+**Kind**: global class  
+<a name="StringUtils.isEmptyOrWhitespace"></a>
+
+### StringUtils.isEmptyOrWhitespace(str)
+<p>Checks if a string is empty or whitespace.</p>
+
+**Kind**: static method of [<code>StringUtils</code>](#StringUtils)  
+
+| Param | Description |
+| --- | --- |
+| str | <p>The string to check.</p> |
 
