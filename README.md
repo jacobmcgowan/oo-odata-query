@@ -2,6 +2,14 @@
 
 This library provides an object oriented method of building OData queries.
 
+## Installation
+
+Install via npm
+
+~~~
+npm install oo-odata-query
+~~~
+
 ## [Documentation](/docs/)
 
 ## Examples
