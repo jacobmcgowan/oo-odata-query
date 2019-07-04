@@ -12,6 +12,12 @@
 to the right.</p></dd>
 <dt><a href="#Gt">Gt</a></dt>
 <dd><p>Specifies a filter condition where the left operand if greater than the right.</p></dd>
+<dt><a href="#Has">Has</a></dt>
+<dd><p>Specifies a filter condition where the left operand is an enumeration of the
+right operand.</p></dd>
+<dt><a href="#In">In</a></dt>
+<dd><p>Specifies a filter condition where the left operand is a value in the right
+operand.</p></dd>
 <dt><a href="#Le">Le</a></dt>
 <dd><p>Specifies a filter condition where the left operand if less than or equal to
 the right.</p></dd>
@@ -137,6 +143,42 @@ to the right.</p>
 
 ### new Gt(left, right)
 <p>Creates an Gt.</p>
+
+
+| Param | Description |
+| --- | --- |
+| left | <p>The left operand.</p> |
+| right | <p>The right operand.</p> |
+
+<a name="Has"></a>
+
+## Has
+<p>Specifies a filter condition where the left operand is an enumeration of the
+right operand.</p>
+
+**Kind**: global class  
+<a name="new_Has_new"></a>
+
+### new Has(left, right)
+<p>Creates a Has.</p>
+
+
+| Param | Description |
+| --- | --- |
+| left | <p>The left operand.</p> |
+| right | <p>The right operand.</p> |
+
+<a name="In"></a>
+
+## In
+<p>Specifies a filter condition where the left operand is a value in the right
+operand.</p>
+
+**Kind**: global class  
+<a name="new_In_new"></a>
+
+### new In(left, right)
+<p>Creates an In.</p>
 
 
 | Param | Description |
