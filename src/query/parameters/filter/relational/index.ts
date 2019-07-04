@@ -6,3 +6,5 @@ export * from './gt';
 export * from './lt';
 export * from './ge';
 export * from './le';
+export * from './has';
+export * from './in';
